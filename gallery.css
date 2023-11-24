@@ -3,25 +3,106 @@
 
 /* Changes the background colour of navigation bar to black*/
 nav { 
-	background-color:black;
-	padding: 20px
+	background-color:#3e4444;
+	
 	
 
 }
 
-/* Adjusts the gallery text and changes the text to white*/
-nav a{
+/* Adjusts the gallery text horizontally and changes the text to white*/
+nav div a{
+
 	color: white;
-	padding: 20px;
+	padding: 14px 16px;
 	text-decoration: none;
+	display: inline-block;
 	font-size: 17px;
-	text-align: 
+	
+}
+/* Gives the image a border, resizes it and gives the opacity a transition*/
+img {
+	
+	border-radius: 30px;
+	border: 10px solid black;
+	max-width: 100%;
+	height: auto;
+	transition:  0.2s;
 }
 
-nav a:hover{
-	background-color: white;
+/* Hovering over the message dims the image*/
+img:hover{
+	opacity: 0.5;
+	cursor: pointer;
+
+}
+
+
+/* Changes the colour of the text + navigation bar when you hover over it*/
+nav div a:hover{
+	background-color: #484f4f;
+	color: white;
+
+}
+
+/* These 3 divs adjust the images / texts on screen */
+div.description{
+	padding: 15px;
+	text-align: center;
+
+}
+
+
+div.bisonImage{
+	padding: 2px
+}
+
+div.gallery{
+	padding: 0 6px;
+	float: left;
+	width: 25%;
+}
+
+/* Allowing the text in the picture to be positioned in the middle and to change the style */
+div.mid{
+	transition: 0.2s;
+	opacity: 0;
+	position: absolute;
+	top: 25%;
+	left:4%;
+	text-align: center;	
+	font-weight: bold;
+  
+}
+
+/* turns the message black*/
+div.clickMessage{
 	color: black;
-
+	font-size:19px;
+	
+    
 
 }
+
+
+/* hovering over the image reveals the text*/
+.bisonImage:hover .mid {
+  opacity: 1;
+  
+}
+
+/* These two @media lines allow the website to be responsive/accessible to other devices besides pc*/
+@media only screen and (max-width: 700px){
+	.gallery{
+		
+		width: 50%;
+		margin: 6px 0;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.gallery{
+		width: 100%;
+	}
+}
+
 
