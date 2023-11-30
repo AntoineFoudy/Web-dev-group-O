@@ -3,18 +3,18 @@
 
 /* Changes the background colour of navigation bar to black*/
 nav { 
-	background-color:#3e4444;
+	background-color:#292F33;
 	
 	
 
 }
 
-/* Adjusts the gallery text horizontally and changes the text to white*/
+/* Adjusts the navigation bar text horizontally and changes the text to white*/
 nav div a{
 
 	color: white;
 	padding: 14px 16px;
-	text-decoration: none;
+	text-decoration: none; /* removes underscore */
 	display: inline-block;
 	font-size: 17px;
 	
@@ -22,8 +22,8 @@ nav div a{
 /* Gives the image a border, resizes it and gives the opacity a transition*/
 img {
 	border-radius: 30px;
-	border: 10px solid black;
-	max-width: 100%;
+	border: 10px solid white;
+	width: 100%;
 	height: auto;
 	transition:  0.2s;
 }
@@ -47,6 +47,7 @@ nav div a:hover{
 div.description{
 	padding: 15px;
 	text-align: center;
+	color: white;
 
 }
 
@@ -56,7 +57,7 @@ div.bisonImage{
 }
 
 div.gallery{
-	padding: 0 6px;
+	padding: 6px;
 	float: left;
 	width: 25%;
 }
@@ -72,7 +73,7 @@ div.mid{
 
 /* turns the message black*/
 div.clickMessage{
-	color: black;
+	color: white;
 	font-size:19px;
 	
     
@@ -91,7 +92,7 @@ div.clickMessage{
 	.gallery{
 		
 		width: 50%;
-		margin: 6px 0;
+		margin: 6px;
 	}
 	
 }
