@@ -1,66 +1,104 @@
 <!-- gallery.html -->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	<!-- two tags are used for making the website more responsive / look better on other devices -->
+	<!-- these two tags are used for making the website more responsive / look better on other devices -->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
 		
 		<title>Gallery</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">  <!-- link to run BootsTrap-->
 		<link rel="stylesheet" href="gallery.css">
+		<!-- NOTE: DO STYLING AND FONTS NEXT SESSION -->
+		
 	
 	</head>
 	<body>
+	<!-- reference https://www.w3schools.com/css/css_navbar.asp -->
+	
 	<!-- Start of the Navigation Bar-->
 		<nav>
 			<div class="navigation">
-				<a href="gallery.html">Gallery</a>
-				<a href="index.html">MiniGame</a
+				<a href="gallery.html"><i class="fa-regular fa-images"> Gallery</i></a> <!-- addition of the gallery icon -->
+				<a href="index.html"><i class="fa-solid fa-gamepad"> Minigame</i></a> <!-- addition of the minigame icon -->
 			</div>
 		</nav>
+	<!-- End of the Navigation Bar-->
+	
+   <!-- reference https://www.w3schools.com/css/css_navbar.asp -->
+
 		<!-- The Gallery -->
 		
+		<h1>GALLERY OF YELLOWSTONE WOLVES</h1>
 		
+		<!-- reference 1 https://www.w3schools.com/css/css_image_gallery.asp  -->
+		<!-- reference 2 https://www.w3schools.com/tags/tag_div.ASP -->
 		<div class="gallery">
 		<!--Start of Image 1 -->
-		
-			<div class="bisonImage">
-			 <a target="image1" href="galleryphotos/bisonwolves.jpg"> <!-- allows the image to be clicked and viewed larger -->
-			<img src="galleryphotos/bisonwolves.jpg" alt="Picture of wolves surrounding bison"> <!-- Image 1 -->
-			<div class="mid">
+			<div class="description">The wolves of Yellowstone surrounding a bison, who they will soon eat </div> <!-- Description of image 1 -->
+			<div class="galleryPhotos"> <!-- allows the images to have the same border, size and click message -->
+			 <a target="image1" href="galleryphotos/bisonwolves.jpg"> <!-- allows the image to be clicked and viewed larger --> <!-- reference https://unsplash.com/  -->
+			<img src="galleryphotos/bisonwolves.jpg" alt="Picture of wolves surrounding bison" id="image1"> <!-- Image 1 -->
+			<div class="mid"> <!-- placeholder for the click message div for better decoration -->
 			<div class="clickMessage">Click the image to get a larger picture</div> <!-- Message that pops up when you hover -->
 			</div>
 			</a>
 			</div>
-			<div class="description">The wolves of Yellowstone surrounding a bison, who they will soon eat </div> <!-- Description of image 1 -->
+			
+		<!--End of Image  1 -->
+	
+	    <!-- Start of Image 2--->
+			<div class="description">Close up photo of a white wolf </div> <!-- Description of image 2-->
+		    <div class="galleryPhotos">
+			 <a target="image2" href="galleryphotos/whitewolf.jpg"> 
+			<img src="galleryphotos/whitewolf.jpg" alt="Picture of wolves surrounding bison"> 
+			<div class="mid">
+			<div class="clickMessage">Click the image to get a larger picture</div> 
+			</div>
+			</a>
+			</div>
+			<div class="description">Close up photo of a white wolf </div> <!-- Description of image 2-->
+		<!-- End of Image 2--->	
+			
+			
+			
+
+		
 		</div>
 		
-		<!--End of Image  1 -->
 		
 		
 		
 		
+		<!-- reference  https://www.w3schools.com/css/css_image_gallery.asp  -->
 		<!-- End of the Gallery -->
-		
-	<!-- Script to run BootsTrap-->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	
+
 	
 	<!-- Script for External Javascript file-->
 	<script type="text/javascript" src="gallery.js"></script>
+	
+	<!-- script for allowing me to use icons from FontAwesome -->
+	<script src="https://kit.fontawesome.com/3618a542c8.js" crossorigin="anonymous"></script> <!-- reference fontawesome.com -->
+	
+	<!-- Script to run BootsTrap-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> <!-- reference https://www.w3schools.com/bootstrap5/ -->
+
 	</body>
 </html>
 
 
-<!--
-Sources used:
-https://www.w3schools.com/css/css_image_gallery.asp - gallery information
-https://www.w3schools.com/bootstrap5/ - inserting bootstrap
-https://www.w3schools.com/tags/tag_div.ASP - creating separate div's for different usages
-https://www.w3schools.com/css/css_navbar.asp - creating the navigation bar
-https://www.w3schools.com/html/html_responsive.asp - making the html more available to other devices
-https://www.w3schools.com/jsref/prop_style_backgroundimage.asp - used for background images
-https://pixabay.com/ - used for free images 
-https://unsplash.com/ - used for free images
--->
+
+
+
+
+
+
+
+
+
 
