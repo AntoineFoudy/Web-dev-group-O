@@ -1,6 +1,10 @@
 /* Gallery CSS */
 
 
+
+
+
+
 /* Changes the background colour of navigation bar to black*/
 nav { 
 	background-color:#292F33;
@@ -9,6 +13,14 @@ nav {
 
 }
 
+/* aligns the entrance text to be in the middle and also gives it a border and background. */
+h1 {
+	text-align: center;
+	color:white;
+	border: 4px solid white;
+	background-color: black;
+	
+}
 /* Adjusts the navigation bar text horizontally and changes the text to white*/
 nav div a{
 
@@ -19,13 +31,20 @@ nav div a{
 	font-size: 17px;
 	
 }
-/* Gives the image a border, resizes it and gives the opacity a transition*/
+
+/*reference  https://www.w3schools.com/css/css_image_gallery.asp */
+
+
+
+/* Gives the image a border, resizes it, centers it and gives the opacity a transition*/
 img {
 	border-radius: 30px;
 	border: 10px solid white;
 	width: 100%;
 	height: auto;
 	transition:  0.2s;
+
+	
 }
 
 /* Hovering over the message dims the image*/
@@ -43,23 +62,33 @@ nav div a:hover{
 
 }
 
-/* These 3 divs adjust the images / texts on screen */
+
+/* centers the description above the photo*/
 div.description{
-	padding: 15px;
 	text-align: center;
-	color: white;
+	color: black;
+	font-weight: bold;
+	font-size: 30px
+	
 
 }
 
 
-div.bisonImage{
-	padding: 2px
-}
+/*reference  https://www.w3schools.com/css/css_image_gallery.asp */
 
+
+/* reference https://www.w3schools.com/tags/tag_div.ASP  */
+
+/* Brings everything below the nav bar into the center of the screen*/
 div.gallery{
+	display: block; 
+	margin-left: auto;
+	margin-right: auto;
 	padding: 6px;
-	float: left;
-	width: 25%;
+	width: 50%;
+	
+	
+	
 }
 
 /* Allowing the text in the picture to be positioned in the middle and to change the style */
@@ -82,28 +111,34 @@ div.clickMessage{
 
 
 /* hovering over the image reveals the text*/
-.bisonImage:hover .mid {
+.galleryPhotos:hover .mid {
 	opacity: 1;
-  
+
 }
 
-/* These two @media lines allow the website to be responsive/accessible to other devices besides pc*/
-@media only screen and (max-width: 1080px){
-	.gallery{
+/* reference https://www.w3schools.com/tags/tag_div.ASP  */
+
+
+
+
+
+
+
+
+/* Reference https://www.w3schools.com/html/tryit.asp?filename=tryhtml_responsive_page */
+
+/* This @media lines allow the website to be responsive/accessible to other devices besides pc*/
+@media screen and (max-width: 720px){
+	.galleryPhotos{
 		
-		width: 50%;
-		margin: 6px;
+		width: 100%;
+		height: auto;
 	}
 	
 }
 
-@media only screen and (max-width: 1920px) {
-	.gallery{
-		width: 100%;
-	}
-}
 
-
+/* Reference https://www.w3schools.com/html/tryit.asp?filename=tryhtml_responsive_page */
 
 
 
