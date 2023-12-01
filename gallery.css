@@ -11,8 +11,7 @@ font-family: 'Press Start 2P', sans-serif;
 
 
 
-/* Changes the background colour of navigation bar to black*/
-
+/* Changes the font of the nav icons */
 a{
 	font-family: 'Hedvig Letters Serif', serif;
 }
@@ -21,7 +20,7 @@ a{
 
 
 
-
+/* Changes the background colour of navigation bar to black*/
 nav { 
 	background-color:#292F33;
 	
