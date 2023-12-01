@@ -19,13 +19,27 @@ window.addEventListener("mousemove", function(event) {
 
 
 // Objects
-function Circle(x, y, radius, color) {
+function Circle(x, y, dx, dy, radius, color) {
     this.x = x;
     this.y = y;
+    this.dx = dx;
+    this.dy = dy;
     this.radius = radius;
     this.color = color;
 
     this.update = function() {
+        this.x += this.dx;
+        this.y += this.dy;
+        if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
+            this.dx = -this.dx;
+        }
+
+        if (this.y + this.radius > innerHeight || this.y - this.radius < 0) {
+            this.dy = -this.dy;
+        }
+
+        this.x += this.dx;
+        this.y += this.dy;
         this.draw();
     };
 
@@ -59,8 +73,14 @@ function Square(x, y, sideLength, color) {
 
 // Implementation
 let player1;
+let circle
 function init(){
     player1 = new Square(undefined, undefined, 50, "black");
+    var x = Math.random() * innerWidth;
+    var y = Math.random() * innerHeight;
+    var dx = (Math.random() - 0.5) * 8;
+    var dy = (Math.random() - 0.5) * 8;
+    circle = new Circle(x, y, dx, dy, 30, "red");
 }
 
 function animate(){
@@ -70,8 +90,8 @@ function animate(){
     player1.x = mouse.x;
     player1.y = mouse.y;
     player1.update();
-
-    
+   
+    circle.update();
 
 
 }
