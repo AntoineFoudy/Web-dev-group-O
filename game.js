@@ -97,5 +97,7 @@ function animate(){
 }
 
 
-init();
-animate();
+document.getElementById("playGame").addEventListener("click", function() {
+    init();
+    animate();
+});
