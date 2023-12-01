@@ -13,7 +13,13 @@
 		<title>Gallery</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">  <!-- link to run BootsTrap-->
 		<link rel="stylesheet" href="gallery.css">
-		<!-- NOTE: DO STYLING AND FONTS NEXT SESSION -->
+		
+		<!-- links used to allow different fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Press+Start+2P&family=Roboto&family=Source+Sans+3:wght@500&display=swap" rel="stylesheet">
+		
+		
 		
 	
 	</head>
@@ -21,11 +27,15 @@
 	<!-- reference https://www.w3schools.com/css/css_navbar.asp -->
 	
 	<!-- Start of the Navigation Bar-->
+	<!-- reference - https://fontawesome.com/ -->
 		<nav>
 			<div class="navigation">
-				<a href="gallery.html">Gallery</a>
-				<a href="game.html">MiniGame</a
+				<a href ="home.html">Home <i class="fa-solid fa-house"></i></a> 
+				<a href="gallery.html">Gallery <i class="fa-solid fa-gamepad"> </i></a>
+				<a href="game.html">Minigame <i class="fa-solid fa-images"></i></a>
+	<!-- reference - https://fontawesome.com/ -->
 			</div>
+			
 		</nav>
 	<!-- End of the Navigation Bar-->
 	
@@ -38,10 +48,11 @@
 		<!-- reference 1 https://www.w3schools.com/css/css_image_gallery.asp  -->
 		<!-- reference 2 https://www.w3schools.com/tags/tag_div.ASP -->
 		<div class="gallery">
+
 		<!--Start of Image 1 -->
 			<div class="description">The wolves of Yellowstone surrounding a bison, who they will soon eat </div> <!-- Description of image 1 -->
 			<div class="galleryPhotos"> <!-- allows the images to have the same border, size and click message -->
-			 <a target="image1" href="galleryphotos/bisonwolves.jpg"> <!-- allows the image to be clicked and viewed larger --> <!-- reference https://unsplash.com/  -->
+			 <a target="image1" href="galleryphotos/bisonwolves.jpg"> <!-- allows the image to be clicked and viewed larger --> <!-- reference https://unsplash.com/ + https://pixabay.com/ -->
 			<img src="galleryphotos/bisonwolves.jpg" alt="Picture of wolves surrounding bison" id="image1"> <!-- Image 1 -->
 			<div class="mid"> <!-- placeholder for the click message div for better decoration -->
 			<div class="clickMessage">Click the image to get a larger picture</div> <!-- Message that pops up when you hover -->
@@ -51,8 +62,10 @@
 			
 		<!--End of Image  1 -->
 	
+	<!-- repeat of the code for the rest of the galleries -
+	
 	    <!-- Start of Image 2--->
-			<div class="description">Close up photo of a white wolf </div> <!-- Description of image 2-->
+			<div class="description">Close up photo of a white wolf </div> 
 		    <div class="galleryPhotos">
 			 <a target="image2" href="galleryphotos/whitewolf.jpg"> 
 			<img src="galleryphotos/whitewolf.jpg" alt="Picture of wolves surrounding bison"> 
@@ -61,9 +74,34 @@
 			</div>
 			</a>
 			</div>
-			<div class="description">Close up photo of a white wolf </div> <!-- Description of image 2-->
-		<!-- End of Image 2--->	
 			
+		
+		
+		<!-- Start of Image 3 -->
+			<div class="description">A pack of wolves sleeping in the snow </div> 
+		    <div class="galleryPhotos">
+			 <a target="image3" href="galleryphotos/sleepywolves.jpg">
+			<img src="galleryphotos/sleepywolves.jpg" alt="A pack of wolves sleeping in the snow">
+			<div class="mid">
+			<div class="clickMessage">Click the image to get a larger picture</div> 
+			</div>
+			</a>
+			</div>
+			
+		<!-- End of Image 3 -->
+		
+		<!-- Start of Image 4 -->
+			<div class="description">Picture of snowy mountain, the area where the wolves live</div> 
+		    <div class="galleryPhotos">
+			 <a target="image4" href="galleryphotos/snowymountain.jpg"> 
+			<img src="galleryphotos/snowymountain.jpg" alt="Picture of snowy mountain, the area where the wolves live"> 
+			<div class="mid">
+			<div class="clickMessage">Click the image to get a larger picture</div> 
+			</div>
+			</a>
+			</div>
+			
+		<!-- End of Image 4 -->
 			
 			
 
