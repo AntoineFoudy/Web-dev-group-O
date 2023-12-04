@@ -17,7 +17,6 @@ window.addEventListener("mousemove", function(event) {
     mouse.y = event.y;
 });
 
-
 // Objects
 function Circle(x, y, dx, dy, radius, color) {
     this.x = x;
@@ -30,16 +29,16 @@ function Circle(x, y, dx, dy, radius, color) {
     this.update = function() {
         this.x += this.dx;
         this.y += this.dy;
-        if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
-            this.dx = -this.dx;
+
+        if (this.x + this.radius > innerWidth || this.x - this.radius < 0 || this.y + this.radius > innerHeight || this.y - this.radius < 0) {
+            this.x = Math.random() * innerWidth;
+            this.y = Math.random() * innerHeight;
+            this.dx = (Math.random() - 0.5) * 8;
+            this.dy = (Math.random() - 0.5) * 8;
+
+            circles.push(new Circle(this.x, this.y, this.dx, this.dy, this.radius, this.color));
         }
 
-        if (this.y + this.radius > innerHeight || this.y - this.radius < 0) {
-            this.dy = -this.dy;
-        }
-
-        this.x += this.dx;
-        this.y += this.dy;
         this.draw();
     };
 
@@ -73,31 +72,32 @@ function Square(x, y, sideLength, color) {
 
 // Implementation
 let player1;
-let circle
-function init(){
+let circles = [];
+
+function init() {
     player1 = new Square(undefined, undefined, 50, "black");
     var x = Math.random() * innerWidth;
     var y = Math.random() * innerHeight;
     var dx = (Math.random() - 0.5) * 8;
     var dy = (Math.random() - 0.5) * 8;
-    circle = new Circle(x, y, dx, dy, 30, "red");
+    circles.push(new Circle(x, y, dx, dy, 30, "red"));
 }
 
-function animate(){
+function animate() {
     requestAnimationFrame(animate);
     c.clearRect(0, 0, innerWidth, innerHeight);
-    
+
     player1.x = mouse.x;
     player1.y = mouse.y;
     player1.update();
-   
-    circle.update();
 
-
+    for (let i = 0; i < circles.length; i++) {
+        circles[i].update();
+    }
 }
 
-
-document.getElementById("playGame").addEventListener("click", function() {
+document.getElementById("playGame").addEventListener("click", function () {
     init();
     animate();
+    document.getElementById("playGame").style.display = "none";
 });
