@@ -9,15 +9,17 @@ font-family: 'Press Start 2P', sans-serif;
 */
 
 
-
-
 /* Changes the font of the nav icons */
-a{
+li{
 	font-family: 'Hedvig Letters Serif', serif;
+	color: white;
+	
+	
+	
 }
 
 
-/* aligns the entrance text to be in the middle and also gives it a border and background. */
+/* aligns the header text to be in the middle and also gives it a border and background. */
 h1 {
 	text-align: center;
 	color:white;
@@ -41,7 +43,7 @@ nav ul a{
 
 
 
-/* Gives the image a border, resizes it, centers it and gives the opacity a transition*/
+/* Gives the images a border, resizes it, centers it and gives the opacity a transition*/
 img {
 	border-radius: 30px;
 	border: 10px solid white;
@@ -54,7 +56,7 @@ img {
 	
 }
 
-/* Hovering over the message dims the image*/
+/* Hovering over the images, dims it and changes the cursor to a pointer*/
 img:hover{
 	opacity: 0.5;
 	cursor: pointer;
@@ -71,7 +73,7 @@ nav ul a:hover{
 
 
 /* centers the description above the photo*/
-div.description{
+#description{
 	font-family: 'Source Sans 3', sans-serif;
 	text-align: center;
 	color: black;
@@ -87,6 +89,7 @@ div.description{
 
 
 /* reference https://www.w3schools.com/tags/tag_div.ASP  */
+
 
 /*Reference https://www.w3schools.com/howto/howto_css_images_side_by_side.asp 
   Reference 2 https://support.w3schools.com/hc/en-gb/articles/4410240180113-How-do-I-center-images- 
@@ -112,7 +115,7 @@ div.gallery{
   Reference 2 https://support.w3schools.com/hc/en-gb/articles/4410240180113-How-do-I-center-images- 
 */
 
-/* Allowing the text in the picture to be positioned in the middle and to change the style */
+/* Turns the click hover message text invisible, centers it and bolds it. */
 div.mid{
 	transition: 0.2s;
 	opacity: 0;
@@ -121,10 +124,11 @@ div.mid{
   
 }
 
-/* turns the message black*/
+/* turns the click message red + gives it an italics font */
 div.clickMessage{
-	color: white;
+	color: red;
 	font-size:25px;
+	font-style: italic;
 	
 	
     
@@ -155,6 +159,7 @@ div.clickMessage{
 	.gallery{
 		margin: 6px 0;
 		float: left;
+		
 		
 		
 		
