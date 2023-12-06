@@ -17,6 +17,14 @@ window.addEventListener("mousemove", function(event) {
     mouse.y = event.y;
 });
 
+var colorArray = [
+    "#3A356E",
+    "#4F81F7",
+    "#00F4CC",
+    "#EFB7FF",
+    "#F5F549",
+];
+
 // Objects
 function Circle(x, y, dx, dy, radius, color) {
     this.x = x;
@@ -24,20 +32,50 @@ function Circle(x, y, dx, dy, radius, color) {
     this.dx = dx;
     this.dy = dy;
     this.radius = radius;
-    this.color = color;
+    this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
 
     this.update = function() {
         this.x += this.dx;
         this.y += this.dy;
 
+        // Checks if Player and Circle have collided
+        if (
+            this.x + this.radius > player1.x &&
+            this.x - this.radius < player1.x + player1.sideLength &&
+            this.y + this.radius > player1.y &&
+            this.y - this.radius < player1.y + player1.sideLength
+        ) {
+            var reloadPg = confirm("Game Over, Do you want to play again?");
+            if (reloadPg == true) {
+                window.location.reload();
+            }
+            else {
+                window.close();
+            }
+        }
+
+        // Generates new Circle everytime circle hits border till 45 Circles are on canvas 
+        if (circles.length <= 45) {
         if (this.x + this.radius > innerWidth || this.x - this.radius < 0 || this.y + this.radius > innerHeight || this.y - this.radius < 0) {
             this.x = Math.random() * innerWidth;
             this.y = Math.random() * innerHeight;
-            this.dx = (Math.random() - 0.5) * 8;
-            this.dy = (Math.random() - 0.5) * 8;
+            this.dx = (Math.random() - 0.5) * 12;
+            this.dy = (Math.random() - 0.5) * 12;
 
+            // Pushes the newly generated Circle into the Circle array
             circles.push(new Circle(this.x, this.y, this.dx, this.dy, this.radius, this.color));
+            }
         }
+        // Makes it so that when when 45 Circles are on the canvas when a Cirlce hits the border the Circle will bounce off of it
+        else {
+        if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
+            this.dx = -this.dx;
+        }
+    
+        if (this.y + this.radius > innerHeight || this.y - this.radius < 0) {
+            this.dy = -this.dy;
+        }
+    }
 
         this.draw();
     };
@@ -78,11 +116,11 @@ function init() {
     player1 = new Square(undefined, undefined, 50, "black");
     var x = Math.random() * innerWidth;
     var y = Math.random() * innerHeight;
-    var dx = (Math.random() - 0.5) * 8;
-    var dy = (Math.random() - 0.5) * 8;
-    circles.push(new Circle(x, y, dx, dy, 30, "red"));
+    var dx = (Math.random() - 0.5) * 12;
+    var dy = (Math.random() - 0.5) * 12;
+    circles.push(new Circle(x, y, dx, dy, 30, "colorArray[Math.floor(Math.random() * colorArray.length)];"));
 }
-
+// Animates the objects
 function animate() {
     requestAnimationFrame(animate);
     c.clearRect(0, 0, innerWidth, innerHeight);
@@ -96,8 +134,13 @@ function animate() {
     }
 }
 
+// Music, Credit = Karl Casey @ White Bat Audio, https://www.youtube.com/watch?v=g6hY7dB54bc&ab_channel=WhiteBatAudio
+var audio = new Audio("music.mp3");
+
+// Calls all the function when button is pressed
 document.getElementById("playGame").addEventListener("click", function () {
     init();
     animate();
+    audio.play();
     document.getElementById("playGame").style.display = "none";
 });
