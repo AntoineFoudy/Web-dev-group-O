@@ -1,3 +1,6 @@
+// https://www.youtube.com/playlist?list=PLpPnRKq7eNW3We9VdCfx9fprhqXHwTPXL
+// Tutorial for cavas 
+
 var canvas = document.querySelector("canvas");
 
 canvas.width = window.innerWidth;
@@ -150,7 +153,7 @@ document.getElementById("playGame").addEventListener("click", function () {
     animate();
     audio.play();
     document.getElementById("playGame").style.display = "none";
-    document.getElementById("goHome").style.display = "none";
+    document.getElementById("navBar").style.display = "none";
 });
 
 document.getElementById("goHome").addEventListener("click", function() {
