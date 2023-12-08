@@ -13,9 +13,6 @@ font-family: 'Press Start 2P', sans-serif;
 li{
 	font-family: 'Hedvig Letters Serif', serif;
 	color: white;
-	
-	
-	
 }
 
 
@@ -195,7 +192,12 @@ div.clickMessage{
 
 /* Game CSS */
 #gameBody {
-          margin: 0;
-          display: flex;
+        margin: 0;
+        display: flex;
 }
 
+
+
+
+
+/* Forms CSS */
