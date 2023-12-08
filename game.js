@@ -3,6 +3,8 @@ var canvas = document.querySelector("canvas");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+document.getElementById("endGame").style.display = "none";
+
 // c = context, saves time 
 var c = canvas.getContext("2d");
 
@@ -45,13 +47,7 @@ function Circle(x, y, dx, dy, radius, color) {
             this.y + this.radius > player1.y &&
             this.y - this.radius < player1.y + player1.sideLength
         ) {
-            var reloadPg = confirm("Game Over, Do you want to play again?");
-            if (reloadPg == true) {
-                window.location.reload();
-            }
-            else {
-                window.close();
-            }
+            gameOver();
         }
 
         // Generates new Circle everytime circle hits border till 45 Circles are on canvas 
@@ -108,6 +104,17 @@ function Square(x, y, sideLength, color) {
     };
 }
 
+function gameOver() {
+    document.querySelector("canvas").style.display = "none";
+    document.getElementById("endGame").style.display = "inline";
+}
+document.getElementById("playAgain").addEventListener("click", function() {
+    window.location.reload();
+})
+document.getElementById("quit").addEventListener("click", function() {
+    window.location.href = "index.html";
+})
+
 // Implementation
 let player1;
 let circles = [];
@@ -143,4 +150,9 @@ document.getElementById("playGame").addEventListener("click", function () {
     animate();
     audio.play();
     document.getElementById("playGame").style.display = "none";
+    document.getElementById("goHome").style.display = "none";
 });
+
+document.getElementById("goHome").addEventListener("click", function() {
+    window.location.href = "index.html";
+})
