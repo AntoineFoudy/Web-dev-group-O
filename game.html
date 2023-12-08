@@ -2,14 +2,23 @@
 <html lang="en">
 <head>
     <title>Game</title>
+    <meta name="viewport">
 </head>
 <body>
     <style>
         body {
           margin: 0;
+          display: flex;
         }
       </style>
     <button id="playGame">Play Game</button>
+    <button id="goHome">Go Back to Home Page</button>
+
+    <div id="endGame">
+      <p>GAME OVER!</p>
+      <button id="playAgain">Press to Play Again</button>
+      <button id="quit">Press to return home</button>
+    </div>
     <canvas></canvas>
 
     <script src="game.js"></script>
