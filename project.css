@@ -194,13 +194,8 @@ div.clickMessage{
 
 
 /* Game CSS */
-game.html.body {
+#gameBody {
           margin: 0;
           display: flex;
 }
-		
-
-
-
-
 
