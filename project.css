@@ -13,6 +13,7 @@ font-family: 'Press Start 2P', sans-serif;
 li{
 	font-family: 'Hedvig Letters Serif', serif;
 	color: white;
+	
 }
 
 
@@ -198,3 +199,11 @@ div.clickMessage{
 
 
 /* Forms CSS */
+
+h2 {
+	text-align: center;
+	color:white;
+	border: 4px solid black;
+	background-color: black;
+	font-family: 'Roboto', sans-serif;
+}
