@@ -35,7 +35,10 @@ function backgroundImage3(){
 	
 }
 
-/* reference - https://codepen.io/ethornbury/pen/Jjxwrzz */
+/* reference - https://codepen.io/ethornbury/pen/Jjxwrzz 
+	reference 2 - https://www.nps.gov/yell/learn/nature/wolves.htm 
+*/
+
 function infoButton(){
 	/// array of facts about wolves /// 
 	var facts = ["As of January 2023, there are at least 108 wolves in the yellowstone park", "90% of the wolves' winter diet is through elk and consists of more deer and smaller mammals in the summer", "The wolves inhabit most of the park, with peak activity being at dawn and dusk"];
@@ -44,8 +47,9 @@ function infoButton(){
     alert(facts[index]); /// prints the facts through an alert box ///
 }
 
-/* reference - https://codepen.io/ethornbury/pen/Jjxwrzz */
-
+/* reference - https://codepen.io/ethornbury/pen/Jjxwrzz 
+   reference 2 - https://www.nps.gov/yell/learn/nature/wolves.htm 
+*/
 
 /* Reference 
    https://www.w3schools.com/jsref/prop_style_backgroundimage.as
