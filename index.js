@@ -1,7 +1,7 @@
 //* Forms Javascript
-/*
-   https://youtube.com/playlist?list=PL4cUxeGkcC9g6m_6Sld9Q4jzqdqHd2HiD&si=QQ1cTW4t4FS2n0Zj
-*/
+
+<!-- Reference:  https://youtube.com/playlist?list=PL4cUxeGkcC9g6m_6Sld9Q4jzqdqHd2HiD&si=QQ1cTW4t4FS2n0Zj -->
+
 function validateForm() {
             
             var firstName = document.getElementById("firstName").value;
