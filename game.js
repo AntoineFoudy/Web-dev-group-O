@@ -22,6 +22,13 @@ window.addEventListener("mousemove", function(event) {
     mouse.y = event.y;
 });
 
+window.addEventListener("resize", function(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    init()
+});
+
 var colorArray = [
     "#3A356E",
     "#4F81F7",
