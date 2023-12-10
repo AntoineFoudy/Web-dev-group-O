@@ -9,8 +9,8 @@
 /// These lines are used to create a background, resize it to a certain resolution and then make it in a fixed position so it doesn't move during scrolling ///
 
 /*Default background (image 1) */
-document.body.style.background = "url('galleryphotos/yellowstonegrass.jpg') no-repeat";
-document.body.style.backgroundSize = "1920px 1080px";  /// readjusts the background image to 1920x1080 resolution
+document.body.style.background = "url('galleryphotos/yellowstonegrass.jpg') no-repeat"; 
+document.body.style.backgroundSize = "1920px 1080px";  
 document.body.style.backgroundAttachment = "fixed";
 
 /* Buttons that are used to change the background of the gallery */
