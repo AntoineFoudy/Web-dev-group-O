@@ -3,10 +3,8 @@
 <!-- Reference:  https://youtube.com/playlist?list=PL4cUxeGkcC9g6m_6Sld9Q4jzqdqHd2HiD&si=QQ1cTW4t4FS2n0Zj -->
 
 
-/* background (image 1) */
-document.body.style.background = "url('galleryphotos/yellowstoneformsbackground.jpg') no-repeat";
-document.body.style.backgroundSize = "1920px 1080px";  /// readjusts the background image to 1920x1080 resolution
-document.body.style.backgroundAttachment = "fixed";
+			
+
 
 function validateForm() {
             
@@ -39,4 +37,7 @@ function validateForm() {
             // If everything is entered correctly the form is submitted 
             alert("Form submitted successfully!");
             return true;
+			
+			
+			
         }
